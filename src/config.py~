@@ -1,0 +1,6 @@
+$google_api_config = [
+  'application-id' => 'towsonhsmathpoints',
+  'service-account-name' => '537575893837-46b2me3g3mu6m74rpb1k5kjp2kahvjt0@developer.gserviceaccount.com',
+  'private-key' => file_get_contents('data/53078d7402abf6b5b537e1ee0c20cd04085c4f00-privatekey.p12'),
+  'dataset-id' => 'towsonhsmathpoints'
+];

@@ -1,0 +1,31 @@
+<?php 
+
+require_once 'google-api-php-client/src/Google_Client.php';
+require_once 'google-api-php-client/src/contrib/Google_DriveService.php';
+
+$client = new Google_Client();
+// Get your credentials from the console
+$client->setClientId('537575893837-j3mio9lqgm84a0dmkthq1d4t1qabqtbt.apps.googleusercontent.com');
+$client->setClientSecret('lXUL_NM6XjXUQLK5QKWsBgJN');
+$client->setRedirectUri('http://2a.towsonhsmathpoints.appspot.com/');
+$client->setScopes(array('https://www.googleapis.com/auth/drive'));
+
+$service = new Google_DriveService($client);
+
+$authUrl = $client->createAuthUrl();
+
+//Request authorization
+print "Please visit:\n$authUrl\n\n";
+print "Please enter the auth code:\n";
+$authCode = trim(fgets(STDIN));
+
+// Exchange authorization code for access token
+$accessToken = $client->authenticate($authCode);
+$client->setAccessToken($accessToken);
+
+print $accessToken;
+
+$tokenfile = 'token.txt';
+$handle = fopen($tokenfile, 'w') or die('Cannot open file:  '.$tokenfile);
+fwrite($handle, $accessToken);
+?>

@@ -1,0 +1,372 @@
+#yourname {
+    color: #428bca;
+    cursor: text;
+}
+#loading-indicator {
+    position: relative;
+    top: 75px;
+}
+.modalBodyCont {
+    max-width:258px
+}
+.modalBodyCont, 
+#memberTableAddMember {
+    margin: auto;
+}
+.datepicker {
+    cursor: pointer !important;
+}
+#divFooter {
+    text-align: center;
+}
+th {
+    text-align: center;
+}
+/*.picker__frame {
+    bottom: 100px !important;
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+}
+.picker__box {
+    border-bottom-left-radius: 5px !important;
+    border-bottom-right-radius: 5px !important;
+}*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+td,
+button, 
+.btn,
+a, 
+input,
+div {
+    font-family: 'Raleway', 'sans-serif';
+}
+
+#tableSizeLimiter {
+    /*-webkit-overflow-scrolling: touch;*/
+    /*    max-height: 400px;
+        overflow: auto;*/
+}
+/*.glyphicon-cog,
+.glyphicon-plus,
+.glyphicon-check {
+    color: grey;
+    font-size: 1.2em;
+}*/
+.datepicker.tutoring {
+/*    border-left:none;
+    border-right: none;
+    border-top-color: #DDD;*/
+}
+.fa {
+    color: grey;
+}
+.fa-default {
+    color: #333;
+}
+.fa-cogs {
+    font-size: 23px;
+}
+.fa-plus {
+    padding-top: 5px;
+    color: #AAA;
+}
+/*.glyphicon-plus {
+    font-size: 0.9em;
+}*/
+.clickable {
+    cursor: pointer;
+}
+.customHover:hover,
+.customHover:focus {
+    background-color: #e5e5e5 !important;
+}
+.addHover:hover,
+.addHover:focus {
+    background-color: #e5e5e5;
+}
+td {
+    vertical-align: middle !important;
+    text-align: center;
+    font-size: 21px;
+    font-weight: 200;
+}
+#indexContainer .bootstrap-select {
+    width: 250px;
+}
+.navbar-brand:hover {
+    color: #777777 !important;
+}
+.btn-grey {
+    background-color: transparent !important;
+}
+*:focus,
+*:active,
+select,
+button {
+    outline: none !important;
+}
+.bootstrap-select .btn:focus {
+    outline-color: transparent !important;
+}
+#reqPointsSuccess {
+    display: none;
+}
+h1 {
+    font-size: 63px;
+}
+.activeDisabled {
+    /*Basic Button Active*/
+    /*background-image: none !important;*/
+    /*outline: 0 !important;*/
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125) !important;
+    /*box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125) !important;*/
+
+    /*Active Primary*/
+
+    /*color: #ffffff;*/
+    /*background-color: #3276b1 !important;*/
+    border-color: #285e8e !important;
+    /*background-image: none !important;*/
+    opacity: 1 !important;
+}
+.fa-inverse {
+    color: white;
+}
+.modal-footer {
+    margin-top: 0;
+}
+.btnmargin {
+    margin: 3px !important;
+}
+h3 {
+    margin: 20px auto;
+}
+p {
+    font-size: 18px !important;
+}
+.fa-spin { 
+    -webkit-filter: blur(0); 
+}
+
+input {
+    margin-bottom: 15px;
+}
+/* Fits tables better on small screens */
+#mediaTester {
+    font-size: 1000px;
+}
+
+
+/* Forces input & select on index to be 250px or less */
+#inputPasswordDiv,
+.bootstrap-select {
+    max-width: 250px; 
+    margin: auto;
+}
+/* Fix for incorrect highlight over arrows in datepicker */
+.picker__header *,
+.picker__header *:before,
+.picker__header *:after {
+    -webkit-box-sizing: inherit;
+    box-sizing: content-box;
+}
+/* Fixes margins around the 'Add' text at the bottom of the tables on settings.php */
+.rowButtonText {
+    margin: 1.5px 0 !important;
+}
+.inline {
+    display: inline;
+}
+
+/* Centers buttons in footer of modals */
+.modal-footer {
+    text-align: center;
+}
+/* Prevents a scroll bar from popping up when not needed */
+.table-responsive {
+    overflow: auto;
+}
+/* Clicking on the navbar toggle would leave it highlighed -> Remove this from bootstrap
+.navbar-default .navbar-toggle:focus,
+.navbar-default .navbar-toggle:click {
+    background-color: #ddd;
+}*/
+.modal-sm {
+    margin: 20px auto;
+    min-width: 300px;
+}
+#reloaderS {
+    font-size: 30px; 
+    position: absolute; 
+    left: 85%; 
+    top: 20px;
+}
+#reloaderPS {
+    font-size: 30px; 
+    position: absolute; 
+    left: 85%; 
+    top: 20px;
+}
+#reloaderS:hover.fa-save,
+#reloaderPS:hover.fa-refresh,
+.fa-print:hover {
+    color: #505050;
+}
+#memberTable {
+    margin-bottom: 0;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: transparent;
+}
+/*For the navbar-toggle*/
+.toggleHover {
+    background-color: #ddd !important;
+}
+
+
+@media (min-width: 768px)  {
+    .fa-fw {
+        display: none;
+    }
+}
+@media (max-width: 650px) {
+    #mediaTester {
+        font-size: 649px;
+    }
+    #reloaderPS {
+        left: 88%;
+    }
+}
+@media (max-width: 540px) {
+    #reloaderPS {
+        left: 90%;
+    }
+}
+@media (max-width: 500px) {
+    #eventTable td,
+    #eventTypeTable td,
+    #memberTable td,
+    table.tutoring td {
+        font-size: 18px;
+    }
+    #pointsTable td {
+        /*font-size: 20px;*/
+    }
+    .borderhide {
+        border-right: none;
+        border-left: none;
+    }
+    .nopadding {
+        padding: 10px 0 0 0;
+    }
+    #memberTable {
+        margin-bottom: 10px;
+    }
+    #memberTable,
+    #eventTable,
+    #eventTypeTable,
+    #pointsTable,
+    table.tutoring {
+        border-bottom: 1px solid #DDD;
+        border-top: 1px solid #DDD;
+    }
+    #mediaTester {
+        font-size: 499px;
+    }
+    #divTeacherOnly {
+        margin-bottom: 20px;
+    }
+    #resetVerify,
+    #reqPointsErrDiv {
+        border-left: none;
+        border-right: none;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+    h1 {
+        font-size: 45px;
+    }
+    #reloaderPS {
+        left: 85%;
+        top: 15px;
+        font-size: 20px;
+    }
+    #reloaderS {
+        left: 82%;
+        top: 15px;
+        font-size: 20px;
+    }
+}
+/* Aligns menu button and pointsheet button so that they are the same size */
+@media (max-width: 409px) {
+    .menuBtn {
+        margin-top: 5px;
+        width: 151px;
+    }
+}
+@media (min-width: 401px) {
+    .input-group.tutoring {
+        max-width: 330px; 
+    }
+}
+@media (max-width: 400px) {
+    #eventTable td,
+    #eventTypeTable td,
+    #memberTable td {
+        font-size: 16px;
+    }
+    #pointsTable td {
+        font-size: 18px;
+    }
+    #mediaTester {
+        font-size: 399px;
+    }
+    h1 {
+        font-size: 40px;
+    }
+    #reloaderS {
+        left: 85%;
+    }
+}
+@media (max-width: 375px) {
+    #reloaderPS {
+        left: 88%;
+    }
+}
+@media (max-width: 400px) {
+    .btn-grey {
+        margin: auto 0;
+        border-radius: 0 !important;
+    }
+    .btn-grey.left {
+        border-left-color: transparent !important;
+    }
+    .btn-grey.right {
+        border-right-color: transparent !important;
+    }
+}
+@media (min-width: 300px) {
+    .modal-sm {
+        width: 300px;
+    }
+}
+.yearlabel.btn {
+    font-size: 14px !important;
+    padding: 6px 4px;
+    margin-bottom: 15px;
+}
+.accesslabel.btn {
+    padding: 6px 17px;
+}
+ul.nav-navbar li {
+    font-size: 18px !important;
+}

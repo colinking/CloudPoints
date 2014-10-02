@@ -1,0 +1,157 @@
+===================================================================
+MHS Pointsheet
+===================================================================
+
+About the project
+=================
+This website was made to make it easier for members of MHS to keep track of points earned throughout the year. 
+It was started by Colin King in November 2013.
+Tested in IE8, Chromium 32, and mobile Safari (iOS7)
+To be tested in Safari 6 (?), IE9, and IE10
+Note: School computers use IE8-IE10
+                            ^ :(
+
+Important Tags
+===================
+.events
+.tutoring
+.eventType
+
+Short-term Todo
+====
+Push the total to the left on small screens (where there aren't table borders)
+Test of IE8
+Change loading to saving for editTutor
+pickadate issues -- opens halfway, when input is above the top of what it would be at half open
+Appparently some people do not have classes on the data sheet, find out and fix
+Fix issues with navbar undefined indexes
+
+Future
+======
+==Functionality
+Fix merge downloads/uploads*
+Find a way to auto-minify files (must work with GAE)
+Less specific dates (like April 2014 - Math Month)
+Separate School Years
+Scores on competitions
+Download/Print Data
+Start new year button
+==Prettiness
+Fix table headers and their alignment when the tbody is hidden/shown
+Fix border on tutoring hour day select
+On hiding tables, scroll the screen to the top (implement #event, #tutoring, etc.)
+Transfer from IDs to Classes
+Organize CSS file, make subheaders, move some to inline
+Work on touch friendliness*
+Remove/standardize the scroll bar, prevent jumps on modal open/close
+Work on making modals better*
+Work on raising Google Page Speed number
+
+Maybe?
+======
+tooltip for teacher only buttons?
+Add page for teachers to use to enter tutoring hours?
+Bring back teachers (allow Hyman to designate people as teachers, though w/ an alert, are teachers (pointwise) handled properly?)?
+Standardize variable names?
+Will Google make a PHP umm.. database (whatever it is called?)?
+Add info buttons? Use Font Awesome for a circle w/ question mark?
+Migrate Tutoring Calenders to the site? Would require a month interface that shows stuff at a glance.
+Tooltips when hovering over events, shows who attended?
+Can I speed up the download process for Google Drive?
+Group Requests together? (look into then and when)
+Add an "I was here!" button?
+
+Ask Hyman
+========
+Should Officers be able to see points?
+
+Can't do
+========
+-the data-divider appears to become unrendered at certain zooms
+-fix blue line on access level select (teacher looking at self) (same kind of error, changes with zoom)
+-extend the length of the session variable--memcache clears frequently, doesn't appear to let you extend length beyond 30 minutes
+-Can't change the pickadate's format after creating them (to make them responsive)
+
+Notes
+========Merge Downloads/Uploads=============
+---Fix merging with name changes, removals --- fixing for removals should fix everything
+-changing names doesn't remove old name
+-removing something, they come back
+-changing dates, doesn't remove the old one
+-->if event is removed, keep everything up to the day
+-->if event date is changed, 
+-change clear to a close button on the pickadate
+-look into array intersections
+
+Warn user if still uploading and attempting to leave
+============================================
+
+==============Touch Friendliness===================
+-Make buttons darken for a moment longer on touch screens - modernizer? --> basically make it mobile friendly
+-Close navbar on touch events
+-Fix Tutoring Hours pickadate on mobile screen (change date format)
+=============================================
+
+==================Modals=======================
+Opening a pickadate and clicking outside of it causes the whole thing to close (i think?)
+
+===============================================
+
+==================Transitions================
+-hiding/showing tables, remove each item with a certain delay?
+-moving between pages
+--Rework to use .ajax or .load (so it stays on one page), then use location.hash or html5 history api to enable the back button (window.history.pushState), or maybe jQuery history plugin?
+==============================================
+
+Occasionally used list of finished things
+===========================================
+Got the local host working again!
+Fixed the tables, they should now be mobile-friendly
+Implemented event getting method for ps.php
+found a way to save the baseurl
+redirects are probably as efficient as they can be
+Fixed the login screen select/input
+Implemented auto-downloading on reload
+You can now click anywhere and the navbar will hide, but only on desktop
+Fixed the navbar (with the hidden items)
+Should have fixed the errors from accessing index or access when they are null
+The login selector is fine, not going to worry about it
+Added alerts for logging in and for removing stuff
+Added "press enter" capabilities to all modals
+removed scores/location from UI, default to false and THS
+Added input for required points
+Fixed bug where you could change your name even if you weren't listed in the SESSION array. Now forces a logout if if your logged in name is different from the downloaded array
+added alerts for unfinished data
+on edits, if nothing is entered, now uses previous data
+also added placeholders on edit inputs that shows previous data
+Removed and edited some of the wording/font-size
+fixed save button being pushed to next line, reduced padding within modal-footer
+fixed improper date showing up in editEvent modal
+merges downloads now
+merges uploads now (in the case that someone else makes a change and saves while you are making changes)
+added loading bar to attendees table
+Fixed login error div being too big on mobile screens
+Fixed iPhone keyboard overwriting modal
+you can now close modals by clicking outside them
+it now checks on the server-side if you have access to reset/change points
+removed unnecessary log statements and added syslog statements at key places
+removed some unnecessary files
+trimmed bootstrap, removed glyphicons (535kb-ish down to 95kb!)
+files are now cached for 30 days, by default
+removed hover effects from navbar-toggle on mobile and focus effects on mobile/desktop
+Fixed h1 text sizes at iPhone size level
+Fixed the init method, it was clashing with changes made to the download method
+fixed the pointsheet not redirecting the user on logout
+Show tutoring hours on Pointsheets
+make tutoring hour names clickable
+lists now update dynamically (don't delete themselves, only what is needed)
+updates the addMember modal list too
+The current member table on the add member modal now has show/hide functionality
+Can now change class of students
+Officers shouldn't be able to delete teachers now
+Update point totals when changing events/tutoring hours (have I done this yet?)
+Update points when removing people/events/eventtypes
+You can't remove the tutoring hours event now
+settings page now scrolls to the top on load
+Added a new access level, coder..can access teacher stuff + has a pointsheet
+The Tutoring hour data select is mobile-friendly now

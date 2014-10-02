@@ -1,0 +1,61 @@
+application: towsonhsmathpoints
+version: release
+runtime: php
+api_version: 1
+threadsafe: true
+
+default_expiration: "30d"
+
+handlers:
+  
+- url: /bootstrap
+  static_dir: bootstrap
+  
+- url: /index
+  script: index.php
+
+- url: /menu
+  script: menu.php
+  
+- url: /pointsheet
+  script: pointsheet.php
+  
+- url: /settings
+  script: settings.php
+#  http_headers:
+#      Content-Encoding: gzip
+  
+- url: /js
+  static_dir: js
+  
+- url: /stylesheets
+  static_dir: stylesheets
+  
+- url: /drive2.php
+  script: drive2.php
+
+- url: /test
+  script: tester.php
+  
+- url: /font-awesome-4.0.3/fonts
+  static_dir: font-awesome-4.0.3/fonts
+  mime_type: application/x-font-otf
+  
+- url: /font-awesome-4.0.3/css
+  static_dir: font-awesome-4.0.3/css
+  
+- url: /passwordstable
+  script: passwordstable.php
+  
+- url: /img/(.*\.(gif|png|jpg|ico))$
+  static_files: img/\1
+  upload: img/.*\.(gif|png|jpg|ico)$
+  
+- url: /
+  script: index.php
+
+- url: /datastore_connect.php
+  script: datastore_connect.php
+
+#- url: /.*
+#  script: error.php

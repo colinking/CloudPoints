@@ -1,0 +1,20 @@
+<?php
+            echo "run.php";
+            require_once "dropbox/dropbox-sdk/Dropbox/autoload.php";
+
+            use \Dropbox as dbx;
+
+            $appInfo = dbx\AppInfo::loadFromJsonFile("dropbox/app-info.json");
+		print_r($appInfo);
+
+		$accessToken=json_decode(file_get_contents("dropbox/token.json"),true);
+		echo  $accessToken["access_token"];
+
+           // $accessToken = dbx\AppInfo::loadFromJsonFile("dropbox/token.auth");
+		//print_r($accessToken);
+            //$webAuth = new dbx\WebAuthNoRedirect($appInfo, "PHP-Example/1.0");
+            
+            $dbxClient = new dbx\Client($accessToken["access_token"], "PHP-Example/1.0");
+            $accountInfo = $dbxClient->getAccountInfo();
+            print_r($accountInfo);
+?>
